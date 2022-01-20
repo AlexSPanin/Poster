@@ -40,10 +40,10 @@
             </objects>
             <point key="canvasLocation" x="-419" y="137"/>
         </scene>
-        <!--View Controller-->
+        <!--Search View Controller-->
         <scene sceneID="avK-Ru-b03">
             <objects>
-                <viewController id="H2X-cA-xI8" sceneMemberID="viewController">
+                <viewController id="H2X-cA-xI8" customClass="SearchViewController" customModule="Poster" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iqo-9t-FqV">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -52,7 +52,7 @@
                                 <rect key="frame" x="110" y="334" width="100" height="100"/>
                                 <color key="backgroundColor" systemColor="linkColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="7eP-91-PDS"/>
+                                    <constraint firstAttribute="width" secondItem="zWA-vS-dSK" secondAttribute="height" multiplier="1:1" id="Y8F-lV-I6k"/>
                                     <constraint firstAttribute="height" constant="100" id="zI1-GB-rzP"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -66,6 +66,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="searchButton:" destination="H2X-cA-xI8" eventType="touchUpInside" id="7y1-bm-nCN"/>
                                     <segue destination="e4c-GE-d8M" kind="presentation" identifier="showSearch" id="fCe-Pm-hAI"/>
                                 </connections>
                             </button>
@@ -86,14 +87,18 @@
                         <constraints>
                             <constraint firstItem="Dt7-nG-mUL" firstAttribute="bottom" secondItem="UyR-bI-eR0" secondAttribute="centerY" constant="-50" id="Cpd-mv-V48"/>
                             <constraint firstItem="zWA-vS-dSK" firstAttribute="top" secondItem="UyR-bI-eR0" secondAttribute="centerY" constant="50" id="Si1-U6-K7l"/>
+                            <constraint firstItem="zWA-vS-dSK" firstAttribute="centerX" secondItem="iqo-9t-FqV" secondAttribute="centerX" id="XuN-dQ-b10"/>
                             <constraint firstItem="UyR-bI-eR0" firstAttribute="trailing" secondItem="YTg-3c-6hP" secondAttribute="trailing" constant="40" id="ZeL-JX-YHO"/>
                             <constraint firstItem="YTg-3c-6hP" firstAttribute="top" secondItem="UyR-bI-eR0" secondAttribute="top" constant="80" id="dry-XB-e3x"/>
-                            <constraint firstItem="zWA-vS-dSK" firstAttribute="centerX" secondItem="iqo-9t-FqV" secondAttribute="centerX" id="e0P-I6-G3S"/>
                             <constraint firstItem="YTg-3c-6hP" firstAttribute="leading" secondItem="UyR-bI-eR0" secondAttribute="leading" constant="40" id="g2s-u7-V7u"/>
                             <constraint firstItem="UyR-bI-eR0" firstAttribute="trailing" secondItem="Dt7-nG-mUL" secondAttribute="trailing" constant="80" id="gNr-w4-e64"/>
                             <constraint firstItem="Dt7-nG-mUL" firstAttribute="leading" secondItem="UyR-bI-eR0" secondAttribute="leading" constant="80" id="krJ-JI-kFZ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="searchTextField" destination="Dt7-nG-mUL" id="RG4-lx-Plm"/>
+                        <outlet property="titleSearchLabel" destination="YTg-3c-6hP" id="0Lr-9z-5az"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="grz-u0-uqF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -115,10 +120,10 @@
             </objects>
             <point key="canvasLocation" x="-1239" y="137"/>
         </scene>
-        <!--View Controller-->
+        <!--Search View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Poster" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SearchViewController" customModule="Poster" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
