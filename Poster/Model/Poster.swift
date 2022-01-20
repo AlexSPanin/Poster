@@ -8,12 +8,11 @@
 import Foundation
 
 struct Posters: Decodable {
-    let data: Attributes?
+    let data: [Attributes]?
 }
 
 struct Attributes: Decodable {
-    let attributes: [Attribute]
-    
+    let attributes: Attribute?
 }
 
 struct Attribute: Decodable {

@@ -12,10 +12,12 @@ class SearchViewController: UIViewController {
     @IBOutlet var titleSearchLabel: UILabel!
     @IBOutlet var searchTextField: UITextField!
     
-    var search: String = ""
+    var posters: Posters?
+    var search: String = "tokyo"
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Search"
         titleSearchLabel.text = """
         Введите тему для поиска
         Анимэ(постеров)
@@ -29,15 +31,18 @@ class SearchViewController: UIViewController {
     // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let aboutVC = segue.destination as? AboutViewController else {return}
-        aboutVC.signModel = signModel
+        if !checkInputText(searchTextField) { return }
+        let postersVC = segue.destination as! PostersTableViewController
+        postersVC.title = search
+        postersVC.fetchPosters(Link.kitsuApi.rawValue + search)
     }
     
-    @IBAction func unwind(segue: UIStoryboardSegue) {}
+    //    @IBAction func unwind(segue: UIStoryboardSegue) { titleSearchLabel.text = "" }
     
     @IBAction func searchButton(_ sender: UIButton) {
+        if !checkInputText(searchTextField) { return }
+        searchTextField.text = ""
     }
-    
 }
 
 extension SearchViewController {
@@ -55,7 +60,9 @@ extension SearchViewController {
     // MARK: - Check Search descripion
     
     private func checkInputText(_ textField: UITextField) -> Bool {
-        guard let text = textField.text, !text.isEmpty else { return falseCheck(textField) } // проверка на пустое значение и введенное
+        guard let text = textField.text else { return falseCheck(textField) }
+        guard !text.isEmpty else { return falseCheck(textField) }
+        
         for character in text {
             if character < "a" || character > "z" { return falseCheck(textField) }
             }
@@ -64,12 +71,10 @@ extension SearchViewController {
     }
     
     // MARK - Show Alert
-        private func falseCheck(_ textField: UITextField) -> Bool {
-            showAlert(title: "Пожалуйста",
-                      message: "введите Одно слово на Английском яыке без заглавных букв",
-                      field: textField)
-            return false
-        }
+    private func falseCheck(_ textField: UITextField) -> Bool {
+        showAlert(title: "Пожалуйста", message: "введите Одно слово на Английском яыке без заглавных букв", field: textField)
+        return false
+    }
 }
 
 // MARK: - TextField controller
@@ -82,7 +87,8 @@ extension SearchViewController:  UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        return checkInputText(textField)
+        if checkInputText(textField) { textField.text = "" }
+        return true
     }
 }
 

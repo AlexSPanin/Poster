@@ -8,7 +8,7 @@
 import Foundation
 
 enum Link: String, CaseIterable {
-    case kitsuApi = "https://kitsu.io/api/edge/anime?filter[text]=tokyo"
+    case kitsuApi = "https://kitsu.io/api/edge/anime?filter[text]="
     case rickAndMortyApi = "https://rickandmortyapi.com/api/character"
 }
 
@@ -41,17 +41,18 @@ class NetworkingManager {
     }
     
     func fetchData(url: String?, complition: @escaping(Result<Posters, ErrorNetwork>) -> Void) {
-        
+      
         guard let url = URL(string: url ?? "") else {
             complition(.failure(.errorURL))
             return
         }
-        
+
         URLSession.shared.dataTask(with: url) { data, _, error in
             guard let data = data else {
                 complition(.failure(.errorData))
                 return
             }
+           
             do {
                 let model = try JSONDecoder().decode(Posters.self, from: data)
                 DispatchQueue.main.async {
