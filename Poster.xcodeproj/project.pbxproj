@@ -56,15 +56,63 @@
 		E2F2828F27999B530085DE08 /* Poster */ = {
 			isa = PBXGroup;
 			children = (
-				E2F2829027999B530085DE08 /* AppDelegate.swift */,
-				E2F2829227999B530085DE08 /* SceneDelegate.swift */,
-				E2F2829427999B530085DE08 /* ViewController.swift */,
-				E2F2829627999B530085DE08 /* Main.storyboard */,
-				E2F2829927999B530085DE08 /* Assets.xcassets */,
-				E2F2829B27999B530085DE08 /* LaunchScreen.storyboard */,
-				E2F2829E27999B530085DE08 /* Info.plist */,
+				E2F282A927999BCC0085DE08 /* Sourses */,
+				E2F282A827999BAB0085DE08 /* SupportingFiles */,
+				E2F282A727999B9E0085DE08 /* Services */,
+				E2F282A627999B890085DE08 /* Storyboards */,
+				E2F282A527999B800085DE08 /* Model */,
+				E2F282A427999B6A0085DE08 /* Viewcontrollers */,
 			);
 			path = Poster;
+			sourceTree = "<group>";
+		};
+		E2F282A427999B6A0085DE08 /* Viewcontrollers */ = {
+			isa = PBXGroup;
+			children = (
+				E2F2829427999B530085DE08 /* ViewController.swift */,
+			);
+			path = Viewcontrollers;
+			sourceTree = "<group>";
+		};
+		E2F282A527999B800085DE08 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E2F282A627999B890085DE08 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				E2F2829B27999B530085DE08 /* LaunchScreen.storyboard */,
+				E2F2829627999B530085DE08 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		E2F282A727999B9E0085DE08 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E2F282A827999BAB0085DE08 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				E2F2829E27999B530085DE08 /* Info.plist */,
+				E2F2829227999B530085DE08 /* SceneDelegate.swift */,
+				E2F2829027999B530085DE08 /* AppDelegate.swift */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		E2F282A927999BCC0085DE08 /* Sourses */ = {
+			isa = PBXGroup;
+			children = (
+				E2F2829927999B530085DE08 /* Assets.xcassets */,
+			);
+			path = Sourses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,7 +339,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QD5349NP78;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Poster/Info.plist;
+				INFOPLIST_FILE = Poster/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -319,7 +367,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QD5349NP78;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Poster/Info.plist;
+				INFOPLIST_FILE = Poster/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
