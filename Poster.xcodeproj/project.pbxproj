@@ -89,8 +89,8 @@
 		E2F282A627999B890085DE08 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				E2F2829B27999B530085DE08 /* LaunchScreen.storyboard */,
 				E2F2829627999B530085DE08 /* Main.storyboard */,
+				E2F2829B27999B530085DE08 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
