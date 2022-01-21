@@ -9,21 +9,21 @@ import UIKit
 
 class ImageViewController: UIViewController {
 
+    @IBOutlet var fullImage: UIImageView!
+    
+    var url: PosterImage?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        fullImage.layer.cornerRadius = 20
+        NetworkingManager.shared.fetchImage(url: url?.original ?? "") { result in
+            switch result {
+            case .success(let data):
+                self.fullImage.image = UIImage(data: data)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

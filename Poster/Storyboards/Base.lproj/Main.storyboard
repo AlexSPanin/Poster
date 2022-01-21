@@ -24,7 +24,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="143"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="S3C-c8-jpl">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="S3C-c8-jpl">
                                             <rect key="frame" x="5" y="5" width="133" height="133"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="S3C-c8-jpl" secondAttribute="height" multiplier="1:1" id="qfO-3f-Rc1"/>
@@ -74,7 +74,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWA-vS-dSK">
-                                <rect key="frame" x="110" y="356" width="100" height="100"/>
+                                <rect key="frame" x="110" y="191" width="100" height="100"/>
                                 <color key="backgroundColor" systemColor="linkColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="zWA-vS-dSK" secondAttribute="height" multiplier="1:1" id="Y8F-lV-I6k"/>
@@ -96,13 +96,13 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Search" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dt7-nG-mUL">
-                                <rect key="frame" x="80" y="222" width="160" height="34"/>
+                                <rect key="frame" x="80" y="137" width="160" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="yes" spellCheckingType="yes" keyboardType="webSearch"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="YTg-3c-6hP">
-                                <rect key="frame" x="40" y="124" width="240" height="21.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <rect key="frame" x="40" y="74" width="240" height="23"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -110,14 +110,14 @@
                         <viewLayoutGuide key="safeArea" id="UyR-bI-eR0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Dt7-nG-mUL" firstAttribute="bottom" secondItem="UyR-bI-eR0" secondAttribute="centerY" constant="-50" id="Cpd-mv-V48"/>
-                            <constraint firstItem="zWA-vS-dSK" firstAttribute="top" secondItem="UyR-bI-eR0" secondAttribute="centerY" constant="50" id="Si1-U6-K7l"/>
+                            <constraint firstItem="zWA-vS-dSK" firstAttribute="top" secondItem="Dt7-nG-mUL" secondAttribute="bottom" constant="20" id="Si1-U6-K7l"/>
                             <constraint firstItem="zWA-vS-dSK" firstAttribute="centerX" secondItem="iqo-9t-FqV" secondAttribute="centerX" id="XuN-dQ-b10"/>
                             <constraint firstItem="UyR-bI-eR0" firstAttribute="trailing" secondItem="YTg-3c-6hP" secondAttribute="trailing" constant="40" id="ZeL-JX-YHO"/>
-                            <constraint firstItem="YTg-3c-6hP" firstAttribute="top" secondItem="UyR-bI-eR0" secondAttribute="top" constant="80" id="dry-XB-e3x"/>
+                            <constraint firstItem="YTg-3c-6hP" firstAttribute="top" secondItem="UyR-bI-eR0" secondAttribute="top" constant="30" id="dry-XB-e3x"/>
                             <constraint firstItem="YTg-3c-6hP" firstAttribute="leading" secondItem="UyR-bI-eR0" secondAttribute="leading" constant="40" id="g2s-u7-V7u"/>
                             <constraint firstItem="UyR-bI-eR0" firstAttribute="trailing" secondItem="Dt7-nG-mUL" secondAttribute="trailing" constant="80" id="gNr-w4-e64"/>
                             <constraint firstItem="Dt7-nG-mUL" firstAttribute="leading" secondItem="UyR-bI-eR0" secondAttribute="leading" constant="80" id="krJ-JI-kFZ"/>
+                            <constraint firstItem="Dt7-nG-mUL" firstAttribute="top" secondItem="YTg-3c-6hP" secondAttribute="bottom" constant="40" id="zfh-aF-uP8"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="olE-uU-bQq"/>
@@ -130,15 +130,15 @@
             </objects>
             <point key="canvasLocation" x="-1389" y="136"/>
         </scene>
-        <!--Search View Controller-->
+        <!--Details View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="SearchViewController" customModule="Poster" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="DetailsViewController" customModule="Poster" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1kP-fB-SD9">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1kP-fB-SD9">
                                 <rect key="frame" x="49" y="64" width="222" height="222"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="1kP-fB-SD9" secondAttribute="height" multiplier="1:1" id="OP7-KE-rjC"/>
@@ -170,20 +170,24 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="3Wu-IE-yqI" id="BDz-Ad-f3O"/>
+                        <outlet property="originalImage" destination="1kP-fB-SD9" id="5EF-e8-TEH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="225" y="136"/>
         </scene>
-        <!--View Controller-->
+        <!--Image View Controller-->
         <scene sceneID="BfW-3g-9bs">
             <objects>
-                <viewController id="MCp-ZQ-2pc" sceneMemberID="viewController">
+                <viewController id="MCp-ZQ-2pc" customClass="ImageViewController" customModule="Poster" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kwi-9p-sia">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3K8-gz-h3M">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3K8-gz-h3M">
                                 <rect key="frame" x="5" y="49" width="310" height="514"/>
                             </imageView>
                         </subviews>
@@ -203,6 +207,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="fullImage" destination="3K8-gz-h3M" id="JAU-as-1rG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MCG-TM-A9l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="aJI-yc-0ND" userLabel="Exit" sceneMemberID="exit"/>

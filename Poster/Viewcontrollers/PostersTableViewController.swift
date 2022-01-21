@@ -38,10 +38,11 @@ class PostersTableViewController: UITableViewController {
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        guard let indexPath = tableView.indexPathForSelectedRow else { return }
+        guard let attribute = posters?.data?[indexPath.row].attributes else { return }
+        let detailesVC = segue.destination as! DetailsViewController
+        detailesVC.attribute = attribute
     }
-
 }
 
 // MARK: - Networking

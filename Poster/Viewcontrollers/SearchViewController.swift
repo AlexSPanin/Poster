@@ -37,7 +37,7 @@ class SearchViewController: UIViewController {
         postersVC.fetchPosters(Link.kitsuApi.rawValue + search)
     }
     
-    @IBAction func unwind(segue: UIStoryboardSegue) { titleSearchLabel.text = "" }
+    @IBAction func unwind(segue: UIStoryboardSegue) { searchTextField.text = "" }
     
     @IBAction func searchButton(_ sender: UIButton) {
         if !checkInputText(searchTextField) { return }

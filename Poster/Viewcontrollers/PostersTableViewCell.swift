@@ -16,13 +16,13 @@ class PostersTableViewCell: UITableViewCell {
         guard let attribute = attribute?.attributes else { return }
         descripionLabel.text = attribute.title
         
-        DispatchQueue.global().async {
-            guard let url = URL(string: attribute.posterImage?.tiny ?? "" ) else { return }
-            guard let imageData = try? Data(contentsOf: url) else { return }
-            
-            DispatchQueue.main.async {
-                self.tinyImage.image = UIImage(data: imageData)
+        NetworkingManager.shared.fetchImage(url: attribute.posterImage?.tiny ?? "") { result in
+            switch result {
+            case .success(let data):
+                self.tinyImage.image = UIImage(data: data)
                 self.tinyImage.layer.cornerRadius = 20
+            case .failure(let error):
+                print(error.localizedDescription)
             }
         }
     }
