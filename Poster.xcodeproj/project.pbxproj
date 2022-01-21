@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E252D5672799E3DB00CC89A2 /* PostersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E252D5662799E3DB00CC89A2 /* PostersTableViewCell.swift */; };
+		E2A25825279A954D00B115E1 /* DetailesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A25824279A954D00B115E1 /* DetailesViewController.swift */; };
+		E2A25827279A956700B115E1 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A25826279A956700B115E1 /* ImageViewController.swift */; };
 		E2F2829127999B530085DE08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F2829027999B530085DE08 /* AppDelegate.swift */; };
 		E2F2829327999B530085DE08 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F2829227999B530085DE08 /* SceneDelegate.swift */; };
 		E2F2829527999B530085DE08 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F2829427999B530085DE08 /* SearchViewController.swift */; };
@@ -21,6 +23,8 @@
 
 /* Begin PBXFileReference section */
 		E252D5662799E3DB00CC89A2 /* PostersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostersTableViewCell.swift; sourceTree = "<group>"; };
+		E2A25824279A954D00B115E1 /* DetailesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailesViewController.swift; sourceTree = "<group>"; };
+		E2A25826279A956700B115E1 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		E2F2828D27999B530085DE08 /* Poster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2F2829027999B530085DE08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2F2829227999B530085DE08 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +84,8 @@
 				E2F2829427999B530085DE08 /* SearchViewController.swift */,
 				E2F282AE2799BEA70085DE08 /* PostersTableViewController.swift */,
 				E252D5662799E3DB00CC89A2 /* PostersTableViewCell.swift */,
+				E2A25824279A954D00B115E1 /* DetailesViewController.swift */,
+				E2A25826279A956700B115E1 /* ImageViewController.swift */,
 			);
 			path = Viewcontrollers;
 			sourceTree = "<group>";
@@ -199,6 +205,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E252D5672799E3DB00CC89A2 /* PostersTableViewCell.swift in Sources */,
+				E2A25827279A956700B115E1 /* ImageViewController.swift in Sources */,
+				E2A25825279A954D00B115E1 /* DetailesViewController.swift in Sources */,
 				E2F282AD27999E380085DE08 /* Poster.swift in Sources */,
 				E2F2829527999B530085DE08 /* SearchViewController.swift in Sources */,
 				E2F282AF2799BEA70085DE08 /* PostersTableViewController.swift in Sources */,
