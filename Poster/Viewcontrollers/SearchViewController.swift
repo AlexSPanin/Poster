@@ -20,7 +20,7 @@ class SearchViewController: UIViewController {
         title = "Search"
         titleSearchLabel.text = """
         Введите тему для поиска
-        Анимэ(постеров)
+        Аниме (постеров)
         """
         
         searchTextField.text = ""
@@ -37,7 +37,7 @@ class SearchViewController: UIViewController {
         postersVC.fetchPosters(Link.kitsuApi.rawValue + search)
     }
     
-    //    @IBAction func unwind(segue: UIStoryboardSegue) { titleSearchLabel.text = "" }
+    @IBAction func unwind(segue: UIStoryboardSegue) { titleSearchLabel.text = "" }
     
     @IBAction func searchButton(_ sender: UIButton) {
         if !checkInputText(searchTextField) { return }
